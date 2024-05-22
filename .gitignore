@@ -1,5 +1,6 @@
 # Add your patterns here
 node_modules/
+public/
 logs/
 .DS_Store
 .env
