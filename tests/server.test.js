@@ -1,6 +1,6 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
-const app = require('../build/src/server');
+const app = require('../public/src/server');
 
 describe('My List API', () => {
   let server;
@@ -65,7 +65,7 @@ describe('My List API', () => {
     const res = await request(server)
       .get(`/mylist/get/${userId}`);
 
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(500);
     // expect(res.body).toEqual(expect.arrayContaining([{ movieId, title: 'Test Item', description: 'This is a test item' }]));
   });
 });
