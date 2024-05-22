@@ -59,4 +59,5 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 By adhering to these guidelines and considerations, the "My List" feature will be robust, efficient, and ready for production deployment.
 
 ## Deployment
-This is deployed using varcel
+This is deployed using varcel<br>
+https://vercel.com/bibeklakra91s-projects/stage-backend-mylist-1/BHpJECmJkSdkhBXZiyWrkPRrEGdr
