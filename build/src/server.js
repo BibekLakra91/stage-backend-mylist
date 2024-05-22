@@ -45,3 +45,7 @@ router.use((req, res, next) => {
 });
 const httpServer = http_1.default.createServer(router);
 httpServer.listen(config_1.default.server.port, () => logging_1.default.info(NAMESPACE, `Server running on ${config_1.default.server.hostname}:${config_1.default.server.port}`));
+mongoose_1.default.connection.close();
+httpServer.close();
+//syntax changed to correct 'app.listen is not a function'
+module.exports = httpServer;
