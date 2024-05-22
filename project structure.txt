@@ -1,0 +1,21 @@
+my-list-feature/
+├── src/
+│   ├── controllers/
+│   │   └── listController.ts
+│   ├── models/
+│   │   ├── userModel.ts
+│   │   ├── movieModel.ts
+│   │   ├── tvShowModel.ts
+│   │   └── listModel.ts
+│   ├── routes/
+│   │   └── listRoutes.ts
+│   ├── services/
+│   │   └── listService.ts
+│   ├── tests/
+│   │   └── list.test.ts
+│   ├── app.ts
+│   └── server.ts
+├── .env
+├── jest.config.js
+├── package.json
+└── tsconfig.json

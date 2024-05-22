@@ -1,0 +1,5 @@
+# Add your patterns here
+node_modules/
+logs/
+.DS_Store
+.env
