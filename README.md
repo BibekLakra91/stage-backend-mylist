@@ -45,7 +45,15 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     You will see a messege showing like this:<br>
     ![output](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/run%20dev%20op.png). <br>Don't worry, its expected
 
-## Design Choices
+## Testing
+- We have to do manual testing. I will add jest-tesing eventually
+- Download postman or install postman extension if you are on vs-code
+- Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Update` etc.
+- We can interact with 3 databases named movies, tvshows and usernames
+- The routes are shown as below:
+![routes](link)
+
+<!-- ## Design Choices
 
 - **Performance**: Optimized database queries and indexed frequently accessed fields to ensure quick data retrieval.
 - **Scalability**: Implemented pagination in the "List My Items" API to handle large datasets efficiently.
@@ -59,4 +67,4 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 By adhering to these guidelines and considerations, the "My List" feature will be robust, efficient, and ready for production deployment.
 
 ## Deployment
-This is deployed using varcel
+This is deployed using varcel -->

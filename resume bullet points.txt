@@ -1,0 +1,3 @@
+- Developed backend APIs in typescript using Express framework to manage an user's favourite tvshows and movies for OTT platforms
+- Implements backend structures for features to add and remove their favourite shows, using frontend interfaces
+- Developed additional API for CRUD operations for tvshows, movies, usernames database, which were implemented using mongoDB.
