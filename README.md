@@ -51,7 +51,7 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 - Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Update` etc.
 - We can interact with 3 databases named movies, tvshows and usernames
 - The routes are shown as below:<br>
-![routes](link)
+![routes](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/routes%20structures.png)
 
 <!-- ## Design Choices
 
