@@ -64,6 +64,7 @@ Implement scalable and performant APIs for the “My List” feature that any cl
         - `users` : `username`
         - `movies`: `title`
         - `tvshows` : `title`
+    - I have not added any non-mandatory keys for now. If you like to any keys/fields feel free to create PR
 <!-- ## Design Choices
 
 - **Performance**: Optimized database queries and indexed frequently accessed fields to ensure quick data retrieval.
