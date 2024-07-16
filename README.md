@@ -36,19 +36,14 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     ```
     - Configure the `MONGO_URL` according to your connection string. The defualt connection string should be `mongodb://localhost:27017` in your mongoDB compass. But, recommend `MONGO_URL` should be `mongodb://127.0.0.1:27017`, for smooth operation. 
     - Just replace `localhost` of connection string to `127.0.0.1`. Then replace your database name with `<db>`. Your db structure should look like this: <br>
-    ![db]() 
+    ![db](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/db%20structure.png) 
     - Connect database
 4. **Run the Application**:
     ```sh
     npm run dev
     ```
     You will see a messege showing like this:<br>
-    ![output](link). <br>Don't worry, its expected
-
-<!-- 5. **Run Tests**:
-    ```sh
-    npm test
-    ``` -->
+    ![output](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/run%20dev%20op.png). <br>Don't worry, its expected
 
 ## Design Choices
 
