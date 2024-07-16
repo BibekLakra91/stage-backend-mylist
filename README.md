@@ -50,7 +50,7 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 - Download postman or install postman extension if you are on vs-code
 - Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Update` etc.
 - We can interact with 3 databases named movies, tvshows and usernames
-- The routes are shown as below:
+- The routes are shown as below:<br>
 ![routes](link)
 
 <!-- ## Design Choices
