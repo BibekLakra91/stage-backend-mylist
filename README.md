@@ -60,7 +60,7 @@ Implement scalable and performant APIs for the “My List” feature that any cl
         - `DELETE` : delete
     - It is important to send a body if the request type is `POST`, like shown below:<br>
     ![template](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/post%20template.png)
-    - Mandatory keys in databases for new entry:
+    - Mandatory keys in databases for new entries:
         - `users` : `username`
         - `movies`: `title`
         - `tvshows` : `title`
