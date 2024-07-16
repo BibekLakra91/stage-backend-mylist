@@ -3,6 +3,8 @@
 ## Overview
 This project enhances an OTT platform by adding a "My List" feature, allowing users to save their favorite movies and TV shows to a personalized list. The backend services will manage this list, providing functionality to add, remove, and list saved items.
 
+## Detailed Overview and Problem Statement
+[Problem statement with Instructions and guidelines](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/Build%20My%20List%20feature%20.pdf)
 ## Objective
 Implement scalable and performant APIs for the “My List” feature that any client (web or mobile app) can consume. Ensure comprehensive integration tests are included.
 
@@ -39,6 +41,8 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     ```sh
     npm run dev
     ```
+    You will see a messege showing like this:<br>
+    ![output](link). <br>Don't worry, its expected
 
 5. **Run Tests**:
     ```sh
@@ -59,5 +63,4 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 By adhering to these guidelines and considerations, the "My List" feature will be robust, efficient, and ready for production deployment.
 
 ## Deployment
-This is deployed using varcel<br>
-https://vercel.com/bibeklakra91s-projects/stage-backend-mylist-1/BHpJECmJkSdkhBXZiyWrkPRrEGdr
+This is deployed using varcel
