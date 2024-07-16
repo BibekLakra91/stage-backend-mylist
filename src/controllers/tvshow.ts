@@ -19,7 +19,7 @@ const readTvshow = (req: Request, res:Response, next: NextFunction) => {
 
     return Tvshow
         .findById(tvshowId)
-        .then(tvshow => tvshow? res.status(200).json({tvshow}):  res.status(500).json({meaaage:'Not found'}))
+        .then(tvshow => tvshow? res.status(200).json({tvshow}):  res.status(500).json({message:'Not found'}))
         .catch((error)=> res.status(500).json({error}))
 
 }

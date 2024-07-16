@@ -19,7 +19,7 @@ const readUser = (req: Request, res:Response, next: NextFunction) => {
 
     return User
         .findById(userId)
-        .then(user => user? res.status(200).json({user}):  res.status(500).json({meaaage:'Not found'}))
+        .then(user => user? res.status(200).json({user}):  res.status(500).json({message:'Not found'}))
         .catch((error)=> res.status(500).json({error}))
 
 }

@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/create',controller.createMovie)
 router.get('/get/:movieId',controller.readMovie)
-router.get('/get/',controller.readAll)
+router.get('/get',controller.readAll)
 router.patch('/update/:movieId',controller.updateMovie)
 router.delete('/delete/:movieId',controller.deleteMovie)
 

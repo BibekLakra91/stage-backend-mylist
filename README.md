@@ -4,7 +4,7 @@
 This project enhances an OTT platform by adding a "My List" feature, allowing users to save their favorite movies and TV shows to a personalized list. The backend services will manage this list, providing functionality to add, remove, and list saved items.
 
 ## Detailed Overview and Problem Statement
-[Problem statement with Instructions and guidelines](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/Build%20My%20List%20feature%20.pdf)
+[Problem statement with Instructions and guidelines](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/Build%20My%20List%20feature.pdf)
 ## Objective
 Implement scalable and performant APIs for the “My List” feature that any client (web or mobile app) can consume. Ensure comprehensive integration tests are included.
 
@@ -27,16 +27,17 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     npm install
     ```
 
-3. **Setup Database**:
-    - Ensure MongoDB is running.
-    - Load initial data using provided scripts.
-    - create .env file & paste this snippet
+3. **Setup Database and .env File**:
+    - Create .env file & paste this snippet
     ```
     SERVER_PORT=3001
     SERVER_HOSTNAME=http://localhost
     MONGO_URL=mongodb://127.0.0.1:27017/<db>
     ```
-    replace your database name with `<db>`
+    - Configure the `MONGO_URL` according to your connection string. The defualt connection string should be `mongodb://localhost:27017` in your mongoDB compass. But, recommend `MONGO_URL` should be `mongodb://127.0.0.1:27017`, for smooth operation. 
+    - Just replace `localhost` of connection string to `127.0.0.1`. Then replace your database name with `<db>`. Your db structure should look like this: <br>
+    ![db]() 
+    - Connect database
 4. **Run the Application**:
     ```sh
     npm run dev
@@ -44,10 +45,10 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     You will see a messege showing like this:<br>
     ![output](link). <br>Don't worry, its expected
 
-5. **Run Tests**:
+<!-- 5. **Run Tests**:
     ```sh
     npm test
-    ```
+    ``` -->
 
 ## Design Choices
 

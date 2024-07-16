@@ -19,7 +19,7 @@ const readMovie = (req: Request, res:Response, next: NextFunction) => {
 
     return Movie
         .findById(movieId)
-        .then(movie => movie? res.status(200).json({movie}):  res.status(500).json({meaaage:'Not found'}))
+        .then(movie => movie? res.status(200).json({movie}):  res.status(500).json({message:'Not found'}))
         .catch((error)=> res.status(500).json({error}))
 
 }
