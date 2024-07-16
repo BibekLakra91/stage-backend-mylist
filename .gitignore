@@ -4,3 +4,4 @@ public/
 logs/
 .DS_Store
 .env
+.gitignore

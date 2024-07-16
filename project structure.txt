@@ -1,6 +1,5 @@
 my-list-feature/
 ├── assets
-├── node_modules
 ├── src/
 |   ├── config/
 |   |   ├── config.ts
@@ -26,8 +25,6 @@ my-list-feature/
 │   │   ├── tvshow.ts
 │   │   └── user.ts
 │   └── server.ts
-├── .env
-├── .gitignore
 ├── Build My List feature.pdf
 ├── License
 ├── package-lock.json
