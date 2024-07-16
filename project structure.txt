@@ -1,21 +1,38 @@
 my-list-feature/
+├── assets
+├── node_modules
 ├── src/
+|   ├── config/
+|   |   ├── config.ts
+|   |   └── logging.ts 
 │   ├── controllers/
-│   │   └── listController.ts
+│   │   ├── movie.ts
+│   │   ├── mylist.ts
+│   │   ├── tvshow.ts
+│   │   └── user.ts
+│   ├── interfaces/
+│   │   ├── movie.ts
+│   │   ├── mylist.ts
+│   │   ├── tvshow.ts
+│   │   └── user.ts
 │   ├── models/
-│   │   ├── userModel.ts
-│   │   ├── movieModel.ts
-│   │   ├── tvShowModel.ts
-│   │   └── listModel.ts
+│   │   ├── movie.ts
+│   │   ├── mylist.ts
+│   │   ├── tvshow.ts
+│   │   └── user.ts
 │   ├── routes/
-│   │   └── listRoutes.ts
-│   ├── services/
-│   │   └── listService.ts
-│   ├── tests/
-│   │   └── list.test.ts
-│   ├── app.ts
+│   │   ├── movie.ts
+│   │   ├── mylist.ts
+│   │   ├── tvshow.ts
+│   │   └── user.ts
 │   └── server.ts
 ├── .env
-├── jest.config.js
+├── .gitignore
+├── Build My List feature.pdf
+├── License
+├── package-lock.json
 ├── package.json
+├── project structure.txt
+├── readme.md
+├── resume bullet points.txt
 └── tsconfig.json
