@@ -48,11 +48,22 @@ Implement scalable and performant APIs for the “My List” feature that any cl
 ## Testing
 - We have to do manual testing. I will add jest-tesing eventually
 - Download postman or install postman extension if you are on vs-code
-- Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Update` etc.
+- Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Delete` etc.
 - We can interact with 3 databases named movies, tvshows and usernames
 - The routes are shown as below:<br>
 ![routes](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/routes%20structures.png)
-
+- ### Guildelines for requests
+    - #### Request types | Keywords:
+        - `POST` : create, update, add
+        - `GET` : get
+        - `PATCH` : update
+        - `DELETE` : delete
+    - It is important to send a body if the request type is `POST`, like shown below:<br>
+    ![template](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/post%20template.png)
+    - Mandatory keys in databases for new entry:
+        - `users` : `username`
+        - `movies`: `title`
+        - `tvshows` : `title`
 <!-- ## Design Choices
 
 - **Performance**: Optimized database queries and indexed frequently accessed fields to ensure quick data retrieval.
