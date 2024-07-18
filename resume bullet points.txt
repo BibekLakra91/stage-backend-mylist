@@ -1,3 +1,3 @@
-- Developed backend APIs in typescript using Express framework to manage an user's favourite tvshows and movies for OTT platforms
-- Implements backend structures for features to add and remove their favourite shows, using frontend interfaces
-- Developed additional API for CRUD operations for tvshows, movies, usernames database, which were implemented using mongoDB.
+-  Engineered robust Backend APIs in TypeScript using the Express framework to efficiently manage users' favorite content
+-  Designed Backend Structures for seamless watchlist management in NodeJS with TypeScript, enabling Efficient retrieval and modification. TypeScript makes the project more Scalable, and improves Readability and Maintainability
+-  Comprehensive APIs for CRUD fn on TV shows, movies, and user databases, leveraging MongoDB for data management
