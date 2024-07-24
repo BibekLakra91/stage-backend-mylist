@@ -47,7 +47,7 @@ const updateTvshow = (req: Request, res:Response, next: NextFunction) => {
         .catch((error)=> res.status(500).json({error}))
 }
 const deleteTvshow = (req: Request, res:Response, next: NextFunction) => {
-    const tvshowId = req.params.tvshowId
+    const tvshowId = req.body.tvshowId
 
     return Tvshow.findByIdAndDelete(tvshowId)
         .then((tvshow) => (tvshow? res.status(201).json({message:'deleted'}):  res.status(404).json({message:'Not found'})))

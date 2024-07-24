@@ -47,7 +47,7 @@ const updateMovie = (req: Request, res:Response, next: NextFunction) => {
         .catch((error)=> res.status(500).json({error}))
 }
 const deleteMovie = (req: Request, res:Response, next: NextFunction) => {
-    const movieId = req.params.movieId
+    const movieId = req.body.movieId
 
     return Movie.findByIdAndDelete(movieId)
         .then((movie) => (movie? res.status(201).json({message:'deleted'}):  res.status(404).json({message:'Not found'})))

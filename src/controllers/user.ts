@@ -47,9 +47,9 @@ const updateUser = (req: Request, res:Response, next: NextFunction) => {
         .catch((error)=> res.status(500).json({error}))
 }
 const deleteUser = (req: Request, res:Response, next: NextFunction) => {
-    const userId = req.params.userId
+    const username = req.body.username
 
-    return User.findByIdAndDelete(userId)
+    return User.findOneAndDelete({username})
         .then((user) => (user? res.status(201).json({message:'deleted'}):  res.status(404).json({message:'Not found'})))
         .catch((error)=> res.status(500).json({error}))
 }

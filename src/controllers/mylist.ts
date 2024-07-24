@@ -7,14 +7,14 @@ import mongoose from 'mongoose'
 // add item to user's mylist
 const add = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const userId = req.params.userId;
-        const itemId = req.params.itemId;
-
+        const username = req.body.username;
+        const itemId = req.body.itemid;
         // Convert itemId to ObjectId
         const itemObjectId = new mongoose.Types.ObjectId(itemId);
+        
 
-        // Find the user by userId
-        const user = await User.findById(userId);
+        // Find the user by username
+        const user = await User.findOne({username});
         if (user) {
             // Check if movieId is already in the list
             if (!user.mylist.includes(itemObjectId)) {
@@ -25,9 +25,9 @@ const add = async (req: Request, res: Response, next: NextFunction) => {
                 await user.save();
 
                 // Send response
-                res.status(201).json({ message: 'Movie added to list successfully', user });
+                res.status(201).json({ message: 'Item added to list successfully', user });
             } else {
-                res.status(400).json({ message: 'Movie is already in the list' });
+                res.status(400).json({ message: 'Item is already in the list' });
             }
         } else {
             res.status(404).json({ message: 'User not found' });
@@ -41,14 +41,14 @@ const add = async (req: Request, res: Response, next: NextFunction) => {
 // Remove item from user's mylist
 const remove = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const userId = req.params.userId;
-        const itemId = req.params.itemId;
-
-        // Convert movieId to ObjectId
+        const username = req.body.username;
+        const itemId = req.body.itemid;
+        // Convert itemId to ObjectId
         const itemObjectId = new mongoose.Types.ObjectId(itemId);
+        console.log(username,itemObjectId)
 
         // Find the user by userId
-        const user = await User.findById(userId);
+        const user = await User.findOne({username});
         if (user) {
             // Check if movieId is in the list
             if (user.mylist.includes(itemObjectId)) {
@@ -59,23 +59,24 @@ const remove = async (req: Request, res: Response, next: NextFunction) => {
                 await user.save();
 
                 // Send response
-                res.status(200).json({ message: 'Movie removed from list successfully', user });
+                res.status(200).json({ message: 'Item removed from list successfully', user });
             } else {
-                res.status(400).json({ message: 'Movie not found in the list' });
+                res.status(400).json({ message: 'Item not found in the list' });
             }
         } else {
             res.status(404).json({ message: 'User not found' });
         }
     } catch (error) {
-        console.error('Error removing movie from list:', error);
+        console.error('Error removing item from list:', error);
         res.status(500).json({ error });
     }
 };
 
 const mylist = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const userId = req.params.userId;
-        const user = await User.findById(userId);
+        const username = req.body.username;
+        console.log(username)
+        const user = await User.findOne({username});
 
         if (user) {
             const itemIds = user.mylist;

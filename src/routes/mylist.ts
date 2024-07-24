@@ -4,9 +4,9 @@ import controller from '../controllers/mylist'
 
 const router = express.Router()
 
-router.post('/:userId/add/:itemId',controller.add)
-router.get('/:userId/get',controller.mylist)
-router.delete('/:userId/delete/:itemId',controller.remove)
+router.post('/add',controller.add)
+router.get('/get',controller.mylist)
+router.delete('/delete',controller.remove)
 
 
 export default router
