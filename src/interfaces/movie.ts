@@ -1,4 +1,4 @@
-import {Document} from 'mongoose'
+import mongoose, { Document, Schema } from 'mongoose';
 
 type Genre = 'Action' | 'Comedy' | 'Drama' | 'Fantasy' | 'Horror' | 'Romance' | 'SciFi';
 

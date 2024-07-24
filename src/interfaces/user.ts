@@ -1,4 +1,4 @@
-import {Document} from 'mongoose'
+import mongoose, { Document, Schema } from 'mongoose';
 
 type Genre = 'Action' | 'Comedy' | 'Drama' | 'Fantasy' | 'Horror' | 'Romance' | 'SciFi';
 
@@ -14,7 +14,7 @@ export default interface IUser extends Document {
     watchedOn: Date,
     rating?: number
   }>,
-  // myList: string[]
+  mylist : mongoose.Types.ObjectId[];
 }
     
     
