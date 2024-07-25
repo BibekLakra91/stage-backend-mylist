@@ -23,29 +23,33 @@ const readMovie = (req: Request, res:Response, next: NextFunction) => {
         .catch((error)=> res.status(500).json({error}))
 
 }
+
 const readAll = (req: Request, res:Response, next: NextFunction) => {
     return Movie
         .find()
         .then(movies => res.status(200).json({movies}))
         .catch((error)=> res.status(500).json({error}))
 }
-const updateMovie = (req: Request, res:Response, next: NextFunction) => {
-    const movieId=req.params.movieId
-    return Movie.findById(movieId)
-        .then((movie) => {
-            if(movie){
-                movie.set(req.body)
 
-                return movie
-                    .save()
-                    .then((movie)=> res.status(201).json({movie}))
-                    .catch((error)=> res.status(500).json({error}))
-            }else{
-                res.status(404).json({message : 'Not found'})
-            }
-        })
-        .catch((error)=> res.status(500).json({error}))
-}
+const updateMovie = async (req: Request, res: Response, next: NextFunction) => {
+    const { movieId, title } = req.body;
+
+    try {
+        const movie = await Movie.findById(movieId);
+
+        if (movie) {
+            movie.title = title;
+            const updatedMovie = await movie.save();
+            return res.status(200).json({ movie: updatedMovie });
+        } else {
+            return res.status(404).json({ message: 'Movie not found' });
+        }
+    } catch (e:any) {
+        return res.status(500).json({ error: e.message });
+    }
+};
+
+
 const deleteMovie = (req: Request, res:Response, next: NextFunction) => {
     const movieId = req.body.movieId
 
