@@ -1,4 +1,4 @@
-# My List Feature for OTT Platform
+# Backend for OTT Platform
 
 ## Overview
 This project enhances an OTT platform by adding a "My List" feature, allowing users to save their favorite movies and TV shows to a personalized list. The backend services will manage this list, providing functionality to add, remove, and list saved items.
@@ -6,13 +6,13 @@ This project enhances an OTT platform by adding a "My List" feature, allowing us
 ## Detailed Overview and Problem Statement
 [Problem statement with Instructions and guidelines](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/Build%20My%20List%20feature.pdf)
 ## Objective
-Implement scalable and performant APIs for the “My List” feature that any client (web or mobile app) can consume. Ensure comprehensive integration tests are included.
+Implement scalable and performant APIs for the “My List” feature that any client (web or mobile app) can consume. Comprehensive integration tests are to be included. For now manual tesing is provided
 
 ## Functional Requirements
 
 1. **Add to My List**: Add a movie or TV show to the user's list. Each item is uniquely identified and duplicates are not allowed.
 2. **Remove from My List**: Remove an item from the user's list using its unique ID.
-3. **List My Items**: Retrieve all items in the user's list with pagination support to efficiently handle large lists.
+3. **List My Items**: Retrieve all items in the user's list. Pagination support to be added to efficiently handle large lists.
 
 ## Setup and Running Instructions
 
@@ -28,13 +28,14 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     ```
 
 3. **Setup Database and .env File**:
-    - Create .env file & paste this snippet
+    - Install mongoDB compass
+    - Create .env file in the code base & paste this snippet 
     ```
-    SERVER_PORT=3001
-    SERVER_HOSTNAME=http://localhost
-    MONGO_URL=mongodb://127.0.0.1:27017/<db>
+    SERVER_PORT=<PORT>     #3001
+    SERVER_HOSTNAME=<HOST URL>  #http://localhost
+    MONGO_URL=<DB_URL>     #mongodb://127.0.0.1:27017/<db>
     ```
-    - Configure the `MONGO_URL` according to your connection string. The defualt connection string should be `mongodb://localhost:27017` in your mongoDB compass. But, recommend `MONGO_URL` should be `mongodb://127.0.0.1:27017`, for smooth operation. 
+    - Configure the `MONGO_URL` according to your connection string. The defualt connection string should be `mongodb://localhost:27017` in your mongoDB compass. But, I recommend `MONGO_URL` should be `mongodb://127.0.0.1:27017`, for smooth operation. 
     - Just replace `localhost` of connection string to `127.0.0.1`. Then replace your database name with `<db>`. Your db structure should look like this: <br>
     ![db](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/db%20structure.png) 
     - Connect database
@@ -42,11 +43,18 @@ Implement scalable and performant APIs for the “My List” feature that any cl
     ```sh
     npm run dev
     ```
-    You will see a messege showing like this:<br>
+    If you open the URL, you will see a messege showing like this:<br>
     ![output](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/run%20dev%20op.png). <br>Don't worry, its expected
 
-## Testing
-- We have to do manual testing. I will add jest-tesing eventually
+## Manual Testing
+
+[![version](https://img.shields.io/badge/Zetflix-1.0.0-red)](https://github.com/BibekLakra91/Zetflix)
+- Follow instruction to run Zetflix on local host
+- Download and open mongoDB compass
+- Create a databse eith same name as .env file
+- Make sure stage-backend is also running in the backend
+
+[![version](https://img.shields.io/badge/Postman-1.1.0-orange)](https://www.postman.com/downloads/)
 - Download postman or install postman extension if you are on vs-code
 - Open postman. Postman is really convinient to send all type of requests like `Get`, `Post`, `Patch`, `Delete` etc.
 - We can interact with 3 databases named movies, tvshows and usernames
@@ -60,11 +68,16 @@ Implement scalable and performant APIs for the “My List” feature that any cl
         - `DELETE` : delete
     - It is important to send a body if the request type is `POST`, like shown below:<br>
     ![template](https://github.com/BibekLakra91/stage-backend-mylist/blob/main/assets/Post%20template.png)
-    - Mandatory keys in databases for new entries:
-        - `users` : `username`
-        - `movies`: `title`
-        - `tvshows` : `title`
-    - I have not added any non-mandatory keys for now. If you like to any keys/fields feel free to create PR
+    - If you test through Zetflix, this parsing body wil not bother you. Mandatory attributes for different function:
+        - add user, delete user : `{username}`
+        - update user : `{username, newName}`
+        - add movie : `{titleMovie}`
+        - delete movie : `{movieId}`
+        - update movie : `{movieId, newTitle}`
+        - add movie : `{titleTvshow}`
+        - delete movie : `{tvshowId}`
+        - update movie : `{tvshowId, newTitle}`
+       
 <!-- ## Design Choices
 
 - **Performance**: Optimized database queries and indexed frequently accessed fields to ensure quick data retrieval.
@@ -80,3 +93,6 @@ By adhering to these guidelines and considerations, the "My List" feature will b
 
 ## Deployment
 This is deployed using varcel -->
+
+## Author
+Bibek Lakra
