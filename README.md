@@ -94,5 +94,3 @@ By adhering to these guidelines and considerations, the "My List" feature will b
 ## Deployment
 This is deployed using varcel -->
 
-## Author
-Bibek Lakra
